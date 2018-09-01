@@ -1,3 +1,3 @@
-# slack-clone-server
+# music-player
 
-[Watch the video to learn how it was made.](https://youtu.be/jDvOauhkEOM)
+WIP!
