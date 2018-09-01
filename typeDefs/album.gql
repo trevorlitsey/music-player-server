@@ -1,0 +1,14 @@
+type Album {
+	id: ID! @Unique
+	name: String!
+}
+
+type createAlbumResponse {
+	ok: Boolean!
+	album: Album
+	errors: [Error!]
+}
+
+type Mutation {
+	createAlbum(name: String!): createAlbumResponse!
+}

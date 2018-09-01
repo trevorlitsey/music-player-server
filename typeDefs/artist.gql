@@ -1,0 +1,14 @@
+type Artist {
+	id: ID! @Unique
+	name: String!
+}
+
+type createArtistResponse {
+	ok: Boolean!
+	artist: Artist
+	errors: [Error!]
+}
+
+type Mutation {
+	createArtist(name: String!): createArtistResponse!
+}

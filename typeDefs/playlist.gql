@@ -1,0 +1,14 @@
+type Playlist {
+	id: ID! @Unique
+	name: String!
+}
+
+type createPlaylistResponse {
+	ok: Boolean!
+	playlist: Playlist
+	errors: [Error!]
+}
+
+type Mutation {
+	createPlaylist(name: String!): createPlaylistResponse!
+}

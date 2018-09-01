@@ -1,0 +1,29 @@
+type Song {
+	id: ID! @Unique
+	name: String!
+	artist: Artist
+	album: Album
+	albumIndex: Int
+}
+
+type Query {
+	song(id: Int!): Song!
+	allSongs: [Song!]!
+}
+
+input createSongInput {
+	name: String!
+	artistId: ID
+	albumId: ID
+	albumIndex: Int
+}
+
+type createSongResponse {
+	ok: Boolean!
+	song: Song
+	errors: [Error!]
+}
+
+type Mutation {
+	createSong(input: createSongInput!): createSongResponse!
+}
